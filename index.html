@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页｜双足实验室招新</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.7;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn{
+            to{
+                opacity:1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            text-align: center;
+            color: #7c4b4b;
+            margin-bottom:10px;
+        }
+        .subtitle{
+            text-align:center;
+            color:#888;
+            margin-bottom:30px;
+        }
+        .tag{
+            display:inline-block;
+            background:#f3e2e2;
+            color:#7c4b4b;
+            padding:4px 12px;
+            border-radius:20px;
+            font-weight:bold;
+            margin-bottom:25px;
+            transition: all 0.3s ease;
+        }
+        .tag:hover{
+            transform: translateY(-3px);
+            box-shadow:0 3px 8px #d8b4b480;
+        }
+        .section{
+            transition: all 0.3s ease;
+            padding:10px;
+            border-radius:10px;
+        }
+        .section:hover{
+            background-color: #fcf6f6;
+            transform: translateY(-2px);
+        }
+        h2{
+            color:#663d3d;
+            margin:24px 0 10px;
+            border-left:4px solid #d8b4b4;
+            padding-left:12px;
+            cursor: pointer;
+        }
+        p{
+            margin-bottom:14px;
+        }
+        .toggle-content{
+            overflow:hidden;
+            max-height:0;
+            transition: max-height 0.5s ease;
+        }
+        .toggle-content.open{
+            max-height: 600px;
+        }
+        .ai-note{
+            background:#faf4ee;
+            padding:16px;
+            border-radius:10px;
+            margin-top:25px;
+            transition:0.3s;
+        }
+        .ai-note:hover{
+            box-shadow:0 3px 10px rgba(0,0,0,0.05);
+        }
+        footer{
+            margin-top:30px;
+            text-align:center;
+            color:#999;
+            font-size:14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>你好，我是26级计科5班的敖菽泽</h1>
+        <div class="subtitle">双足实验室第一轮考核 · 个人主页</div>
+
+        <div class="tag">🎯 感兴趣方向：3D</div>
+
+        <div class="section">
+            <h2>一、真实的我</h2>
+            <p>我是一名大一新生，从高中开始就对计算机、三维视觉充满好奇心。平时喜欢主动搜资料自学，遇到不懂的技术问题习惯自己动手尝试，不怕试错。暑假入学前，我看了很多3D建模、三维重建相关科普内容，对数字世界的三维构建产生了浓厚兴趣。</p >
+        </div>
+
+        <div class="section">
+            <h2 onclick="toggleBlock()">二、我的小尝试（点击标题展开/收起）</h2>
+            <div class="toggle-content" id="tryContent">
+                <p>虽然还没有大型项目，但我已经做过很多小探索：</p >
+                <p>我明白很多知识还很浅，但享受从0到1动手探索的过程，哪怕尝试失败，也会总结经验。</p >
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>三、对3D方向的理解与期待</h2>
+            <p>我理解的3D方向，是用数字化手段重建、表达三维世界。小到模型建模，大到场景三维重建，能把现实世界转化成计算机可识别的数据。</p >
+            <p>我希望在实验室学习三维数据采集、模型处理相关内容，尝试动手完成小型3D相关实践。我期待跟着学长学姐学习，把理论变成看得见的成果。</p >
+        </div>
+
+        <div class="ai-note">
+            <h2>四、我如何借助AI完成这个网页</h2>
+            <p>本次网页制作全程借助AI辅助：先用AI梳理网页整体结构、撰写个人介绍文案；让AI生成网页基础代码；遇到页面布局、移动端显示报错时，描述问题，和AI一起调试修改，最终得到这个可以直接运行的网页。</p >
+            <p>在这个过程里，我学会把想法转化为明确需求，利用AI作为工具解决陌生技术难题。</p >
+        </div>
+        <footer>感谢浏览，期待能加入双足实验室✨</footer>
+    </div>
+
+<script>
+// 点击展开收起功能
+function toggleBlock(){
+    const content = document.getElementById("tryContent");
+    content.classList.toggle("open");
+}
+</script>
+</body>
+</html>
